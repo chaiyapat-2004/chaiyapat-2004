@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="50%" stop-color="#0b1220" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <!-- Neon Glow Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="laser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0" />
+      <stop offset="80%" stop-color="#00e5ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    .title { font-weight: 800; font-size: 15px; letter-spacing: 2px; }
+    .label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; fill: #64748b; }
+    .value { font-size: 14px; font-weight: 700; fill: #f8fafc; letter-spacing: 1px; }
+    .blink { animation: blinker 1.4s infinite; }
+    @keyframes blinker { 50% { opacity: 0.3; } }
+  </style>
+
+  <!-- Outer Card Frame -->
+  <rect x="2" y="2" width="876" height="296" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="2" />
+  
+  <!-- Subtle Grid Pattern in Header Area -->
+  <g opacity="0.12">
+    <line x1="20" y1="52" x2="860" y2="52" stroke="#00e5ff" stroke-width="1" />
+    <line x1="20" y1="210" x2="860" y2="210" stroke="#00e5ff" stroke-width="1" />
+    <line x1="180" y1="2" x2="180" y2="52" stroke="#00e5ff" stroke-width="1" />
+    <line x1="680" y1="2" x2="680" y2="52" stroke="#00e5ff" stroke-width="1" />
+  </g>
+
+  <!-- TOP TELEMETRY BAR -->
+  <!-- Left: Game Mode / Sector -->
+  <circle cx="34" cy="28" r="5" fill="#00e5ff" filter="url(#glow-cyan)" class="blink" />
+  <text x="50" y="33" class="font-mono title" fill="#00e5ff" filter="url(#glow-cyan)">SIGNAL RUN</text>
+  <text x="175" y="32" class="font-mono" font-size="12" fill="#64748b">// SECTOR 2026 · PILOT @CHAIYAPAT-2004</text>
+
+  <!-- Right: Arcade Hi-Score -->
+  <rect x="710" y="14" width="145" height="26" rx="6" fill="#111827" stroke="#ffd000" stroke-width="1" />
+  <text x="722" y="31" class="font-mono" font-size="11" font-weight="700" fill="#ffd000" filter="url(#glow-gold)">HI-SCORE: 0003</text>
+
+  <!-- MAIN FLIGHT FIELD (Contribution Grid Simulation) -->
+  <g transform="translate(30, 70)">
+    <!-- Simulated 52-week Grid blocks (sampled aesthetic strip) -->
+    <!-- Rows of dots / squares -->
+    <g opacity="0.85">
+      <!-- Week 1 - 10 (idle space) -->
+      <g fill="#161b22">
+        <rect x="0" y="0" width="11" height="11" rx="2" />
+        <rect x="0" y="15" width="11" height="11" rx="2" />
+        <rect x="0" y="30" width="11" height="11" rx="2" />
+        <rect x="0" y="45" width="11" height="11" rx="2" />
+        <rect x="0" y="60" width="11" height="11" rx="2" />
+        <rect x="0" y="75" width="11" height="11" rx="2" />
+        <rect x="0" y="90" width="11" height="11" rx="2" />
+
+        <rect x="16" y="0" width="11" height="11" rx="2" />
+        <rect x="16" y="15" width="11" height="11" rx="2" />
+        <rect x="16" y="30" width="11" height="11" rx="2" />
+        <rect x="16" y="45" width="11" height="11" rx="2" />
+        <rect x="16" y="60" width="11" height="11" rx="2" />
+        <rect x="16" y="75" width="11" height="11" rx="2" />
+        <rect x="16" y="90" width="11" height="11" rx="2" />
+
+        <rect x="32" y="0" width="11" height="11" rx="2" />
+        <rect x="32" y="15" width="11" height="11" rx="2" />
+        <rect x="32" y="30" width="11" height="11" rx="2" fill="#0e4429" />
+        <rect x="32" y="45" width="11" height="11" rx="2" />
+        <rect x="32" y="60" width="11" height="11" rx="2" />
+        <rect x="32" y="75" width="11" height="11" rx="2" />
+        <rect x="32" y="90" width="11" height="11" rx="2" />
+
+        <rect x="48" y="0" width="11" height="11" rx="2" />
+        <rect x="48" y="15" width="11" height="11" rx="2" />
+        <rect x="48" y="30" width="11" height="11" rx="2" />
+        <rect x="48" y="45" width="11" height="11" rx="2" />
+        <rect x="48" y="60" width="11" height="11" rx="2" />
+        <rect x="48" y="75" width="11" height="11" rx="2" />
+        <rect x="48" y="90" width="11" height="11" rx="2" />
+
+        <rect x="64" y="0" width="11" height="11" rx="2" />
+        <rect x="64" y="15" width="11" height="11" rx="2" />
+        <rect x="64" y="30" width="11" height="11" rx="2" />
+        <rect x="64" y="45" width="11" height="11" rx="2" />
+        <rect x="64" y="60" width="11" height="11" rx="2" />
+        <rect x="64" y="75" width="11" height="11" rx="2" />
+        <rect x="64" y="90" width="11" height="11" rx="2" />
+
+        <rect x="80" y="0" width="11" height="11" rx="2" />
+        <rect x="80" y="15" width="11" height="11" rx="2" />
+        <rect x="80" y="30" width="11" height="11" rx="2" />
+        <rect x="80" y="45" width="11" height="11" rx="2" />
+        <rect x="80" y="60" width="11" height="11" rx="2" />
+        <rect x="80" y="75" width="11" height="11" rx="2" />
+        <rect x="80" y="90" width="11" height="11" rx="2" />
+      </g>
+
+      <!-- Active Energy Zone (Incoming Targets) -->
+      <g fill="#161b22">
+        <rect x="96" y="0" width="11" height="11" rx="2" />
+        <rect x="96" y="15" width="11" height="11" rx="2" />
+        <rect x="96" y="30" width="11" height="11" rx="2" />
+        <rect x="96" y="45" width="11" height="11" rx="2" />
+        <rect x="96" y="60" width="11" height="11" rx="2" />
+        <rect x="96" y="75" width="11" height="11" rx="2" />
+        <rect x="96" y="90" width="11" height="11" rx="2" />
+
+        <rect x="112" y="0" width="11" height="11" rx="2" />
+        <rect x="112" y="15" width="11" height="11" rx="2" />
+        <rect x="112" y="30" width="11" height="11" rx="2" />
+        <rect x="112" y="45" width="11" height="11" rx="2" fill="#26a641" />
+        <rect x="112" y="60" width="11" height="11" rx="2" />
+        <rect x="112" y="75" width="11" height="11" rx="2" />
+        <rect x="112" y="90" width="11" height="11" rx="2" />
+
+        <rect x="128" y="0" width="11" height="11" rx="2" />
+        <rect x="128" y="15" width="11" height="11" rx="2" />
+        <rect x="128" y="30" width="11" height="11" rx="2" />
+        <rect x="128" y="45" width="11" height="11" rx="2" />
+        <rect x="128" y="60" width="11" height="11" rx="2" />
+        <rect x="128" y="75" width="11" height="11" rx="2" />
+        <rect x="128" y="90" width="11" height="11" rx="2" />
+
+        <rect x="144" y="0" width="11" height="11" rx="2" />
+        <rect x="144" y="15" width="11" height="11" rx="2" fill="#39d353" filter="url(#glow-cyan)" />
+        <rect x="144" y="30" width="11" height="11" rx="2" />
+        <rect x="144" y="45" width="11" height="11" rx="2" />
+        <rect x="144" y="60" width="11" height="11" rx="2" />
+        <rect x="144" y="75" width="11" height="11" rx="2" />
+        <rect x="144" y="90" width="11" height="11" rx="2" />
+      </g>
+    </g>
+
+    <!-- Laser Track Trajectory -->
+    <path d="M 180 50 L 520 50" stroke="url(#laser)" stroke-width="2" />
+    <path d="M 180 52 L 480 52" stroke="#00e5ff" stroke-width="1" stroke-dasharray="4,6" opacity="0.6" />
+
+    <!-- Space Runner Vessel / Pilot Cockpit (Iconic Signal Run Ship) -->
+    <g transform="translate(520, 32)">
+      <!-- Ship Thruster Flame -->
+      <polygon points="-30,18 -10,14 -10,22" fill="#ffd000" filter="url(#glow-gold)" />
+      <polygon points="-22,18 -10,16 -10,20" fill="#ffffff" />
+      
+      <!-- Ship Main Hull -->
+      <polygon points="0,18 24,6 42,18 24,30" fill="#0f172a" stroke="#00e5ff" stroke-width="1.8" filter="url(#glow-cyan)" />
+      
+      <!-- Cockpit Core -->
+      <polygon points="12,18 24,12 30,18 24,24" fill="#00e5ff" opacity="0.85" />
+      
+      <!-- Wing Details -->
+      <line x1="8" y1="9" x2="-8" y2="2" stroke="#38bdf8" stroke-width="1.5" />
+      <line x1="8" y1="27" x2="-8" y2="34" stroke="#38bdf8" stroke-width="1.5" />
+      <circle cx="-8" cy="2" r="2" fill="#ffd000" />
+      <circle cx="-8" cy="34" r="2" fill="#ffd000" />
+
+      <!-- Energy Target Cursor -->
+      <circle cx="90" cy="18" r="10" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3,3" class="blink" />
+      <rect x="85" y="13" width="10" height="10" rx="2" fill="#39d353" filter="url(#glow-cyan)" />
+    </g>
+
+    <!-- Right Side Tactical Console Overlay -->
+    <g transform="translate(640, 5)">
+      <rect x="0" y="0" width="175" height="96" rx="8" fill="#0b101b" stroke="#1e293b" stroke-width="1" />
+      <text x="14" y="24" class="font-mono label">TELEMETRY DIAGNOSTIC</text>
+      <text x="14" y="46" class="font-mono" font-size="11" fill="#38bdf8">ROAST: 08/100 (OVERRIDDEN)</text>
+      <text x="14" y="66" class="font-mono" font-size="11" fill="#ffd000">MODE: HYPERDRIVE BOOT</text>
+      <text x="14" y="84" class="font-mono" font-size="10" fill="#94a3b8">THRUSTERS: 100% ONLINE</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM STATS DOCK (4 Glass Telemetry Pods) -->
+  <g transform="translate(30, 222)">
+    <!-- Pod 1: LEVEL / YEAR -->
+    <rect x="0" y="0" width="192" height="58" rx="10" fill="#0d1424" stroke="#1e293b" stroke-width="1" />
+    <text x="16" y="22" class="font-mono label">SECTOR LEVEL</text>
+    <text x="16" y="44" class="font-mono value" fill="#00e5ff">2026 // CE CADET</text>
+
+    <!-- Pod 2: STREAK / STATUS -->
+    <rect x="208" y="0" width="192" height="58" rx="10" fill="#0d1424" stroke="#1e293b" stroke-width="1" />
+    <text x="224" y="22" class="font-mono label">FLIGHT STATUS</text>
+    <text x="224" y="44" class="font-mono value" fill="#39d353">IGNITING ENGINES</text>
+
+    <!-- Pod 3: PRIMARY SHIP STACK -->
+    <rect x="416" y="0" width="192" height="58" rx="10" fill="#0d1424" stroke="#1e293b" stroke-width="1" />
+    <text x="432" y="22" class="font-mono label">CORE PROTOCOL</text>
+    <text x="432" y="44" class="font-mono value" fill="#ffd000">NODE.JS / JS / WEB</text>
+
+    <!-- Pod 4: ACADEMIC SECTOR -->
+    <rect x="624" y="0" width="196" height="58" rx="10" fill="#0d1424" stroke="#1e293b" stroke-width="1" />
+    <text x="640" y="22" class="font-mono label">ORIGIN BASE</text>
+    <text x="640" y="44" class="font-mono value" fill="#f8fafc">MAHIDOL UNIV (EGCI)</text>
+  </g>
+</svg>
